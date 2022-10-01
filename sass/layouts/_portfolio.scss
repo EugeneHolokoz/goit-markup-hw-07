@@ -47,11 +47,6 @@
     &:focus {
         box-shadow: 0px 1px 1px var(--box-shadow-blc-cl-12), 0px 4px 4px var(--box-shadow-blc-cl-06), 1px 4px 6px var(--box-shadow-blc-cl-16);
     }
-
-    &:hover .thumb-overlay,
-    &:focus .thumb-overlay {
-        transform: translateY(0);
-    }
 }
 
 .portfolio__thumb {
@@ -69,6 +64,12 @@
     padding: 63px 24px;
     background-color: var(--prtl-thumb-overlay);
     transition: transform var(--anim-fast);
+
+    .portfolio__link:hover &,
+    .portfolio__link:focus & {
+        transform: translateY(0);
+    }
+
 }
 
 .thumb-overlay__desc {
